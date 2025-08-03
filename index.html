@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resume form by Bishal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Resume</h1>
+
+  <form id="frm">
+    <div class="field">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" required />
+      <div class="err">Required</div>
+    </div>
+
+    <div class="field">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required />
+      <div class="err">Enter valid email</div>
+    </div>
+
+    <div class="field">
+      <label for="phone">Phone *</label>
+      <input type="tel" id="phone" name="phone"
+             pattern="^\\+?[\\d\\s\\-]{7,}$"
+             required />
+      <div class="err">Enter phone number</div>
+    </div>
+
+    <div class="field">
+      <label for="title">Title (e.g. “Software Engineer”)</label>
+      <input type="text" id="title" name="title" />
+    </div>
+
+    <div class="field">
+      <label for="summary">Summary / Objective</label>
+      <textarea id="summary" rows="2"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="skills">Skills (comma‑separated)</label>
+      <input type="text" id="skills" />
+    </div>
+
+    <h2>Education</h2>
+    <div class="field">
+      <input type="text" id="eduInst" placeholder="Institution" required />
+      <div class="err">Required</div>
+    </div>
+    <div class="field">
+      <input type="text" id="eduYear" placeholder="Year (e.g. 2024)" required />
+      <div class="err">Required</div>
+    </div>
+
+    <h2>Experience</h2>
+    <div class="field">
+      <input type="text" id="expCompany" placeholder="Company" required />
+      <div class="err">Required</div>
+    </div>
+    <div class="field">
+      <input type="text" id="expRole" placeholder="Role" required />
+      <div class="err">Required</div>
+    </div>
+    <div class="field">
+      <textarea id="expDesc" rows="2" placeholder="Brief description…" required></textarea>
+      <div class="err">Required</div>
+    </div>
+
+    <button type="submit">Generate Resume</button>
+  </form>
+
+  <div id="res" style="display:none;">
+    <div id="resContent"></div>
+    <button id="back">✎ Back to edit</button>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
