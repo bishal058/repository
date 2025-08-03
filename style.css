@@ -1,0 +1,56 @@
+body {
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 1.5;
+  background-color: rgb(193, 189, 81);
+}
+h1, h2 { margin-top: 2rem;
+color: #232938; }
+
+.field {
+  margin-bottom: 0.8rem;
+}
+.field label {
+  display: block;
+  font-weight: bold;
+}
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1rem;
+  border: 1px solid #0fe1b0;
+  border-radius: 4px;
+}
+.err {
+  color: red;
+  font-size: 0.85rem;
+  display: none;
+
+}
+
+button {
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  cursor: pointer;
+  color: rgb(125, 11, 240);
+}
+
+#resContent {
+  padding: 1em;
+  border: 1px; solid #ed3f13;
+  margin: 2em 0;
+}
+
+@media (min-width: 600px) {
+  #resContent {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 2em;
+  }
+  #resContent div {
+    margin-bottom: 1em;
+  }
+}
